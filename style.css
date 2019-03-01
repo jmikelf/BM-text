@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+@font-face {
+    font-family: 'PixelFont'; /*a name to be used later*/
+    src: url('Square.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'LEDFont'; /*a name to be used later*/
+    src: url('Led.ttf'); /*URL to font*/
+}
+
+@-webkit-keyframes text-shadow-drop-top {
+    0% {
+        text-shadow: 0 0 0 rgba(180,44,188, 0);
+    }
+
+    100% {
+        text-shadow: 0 -6px 18px rgba(180,44,188, 0.35);
+    }
+}
+
+@keyframes text-shadow-drop-top {
+    0% {
+        text-shadow: 0 0 0 rgba(180,44,188, 0);
+    }
+
+    100% {
+        text-shadow: 0 -6px 18px rgba(180,44,188, 0.35);
+    }
+}
+
+
+body {
+    font-family: 'PixelFont', serif;
+    font-weight: lighter;
+    background: black;
+}
+
+body.dark {
+    background: black;
+    color: green;
+}
+
+.glitch-wrapper {
+    height: 100%;
+    background: black;
+    font-family: 'Archivo Black', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.glitch {
+    color: white;
+    font-size: 150px;
+    /*text-transform: upercase;*/
+    position: relative;
+    display: inline-block;
+}
+
+    .glitch::before,
+    .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+
+    .glitch::before {
+        left: 2px;
+        text-shadow: -2px 0 #49FC00;
+        clip: rect(24px, 550px, 90px, 0);
+        animation: glitch-anim-2 3s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+        left: -2px;
+        text-shadow: -2px 0 #b300fc;
+        clip: rect(85px, 550px, 140px, 0);
+        animation: glitch-anim 2.5s infinite linear alternate-reverse;
+    }
+
+@-webkit-keyframes glitch-anim {
+    0% {
+        clip: rect(119px, 9999px, 35px, 0);
+    }
+
+    4.166666666666666% {
+        clip: rect(28px, 9999px, 77px, 0);
+    }
+
+    8.333333333333332% {
+        clip: rect(120px, 9999px, 78px, 0);
+    }
+
+    12.5% {
+        clip: rect(55px, 9999px, 78px, 0);
+    }
+
+    16.666666666666664% {
+        clip: rect(20px, 9999px, 87px, 0);
+    }
+
+    20.833333333333336% {
+        clip: rect(42px, 9999px, 83px, 0);
+    }
+
+    25% {
+        clip: rect(95px, 9999px, 44px, 0);
+    }
+
+    29.166666666666668% {
+        clip: rect(5px, 9999px, 11px, 0);
+    }
+
+    33.33333333333333% {
+        clip: rect(2px, 9999px, 71px, 0);
+    }
+
+    37.5% {
+        clip: rect(124px, 9999px, 129px, 0);
+    }
+
+    41.66666666666667% {
+        clip: rect(34px, 9999px, 15px, 0);
+    }
+
+    45.83333333333333% {
+        clip: rect(69px, 9999px, 29px, 0);
+    }
+
+    50% {
+        clip: rect(19px, 9999px, 81px, 0);
+    }
+
+    54.166666666666664% {
+        clip: rect(80px, 9999px, 104px, 0);
+    }
+
+    58.333333333333336% {
+        clip: rect(3px, 9999px, 57px, 0);
+    }
+
+    62.5% {
+        clip: rect(95px, 9999px, 50px, 0);
+    }
+
+    66.66666666666666% {
+        clip: rect(16px, 9999px, 118px, 0);
+    }
+
+    70.83333333333334% {
+        clip: rect(20px, 9999px, 140px, 0);
+    }
+
+    75% {
+        clip: rect(18px, 9999px, 62px, 0);
+    }
+
+    79.16666666666666% {
+        clip: rect(143px, 9999px, 12px, 0);
+    }
+
+    83.33333333333334% {
+        clip: rect(97px, 9999px, 111px, 0);
+    }
+
+    87.5% {
+        clip: rect(135px, 9999px, 34px, 0);
+    }
+
+    91.66666666666666% {
+        clip: rect(140px, 9999px, 83px, 0);
+    }
+
+    95.83333333333334% {
+        clip: rect(139px, 9999px, 125px, 0);
+    }
+
+    100% {
+        clip: rect(14px, 9999px, 51px, 0);
+    }
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(119px, 9999px, 35px, 0);
+    }
+
+    4.166666666666666% {
+        clip: rect(28px, 9999px, 77px, 0);
+    }
+
+    8.333333333333332% {
+        clip: rect(120px, 9999px, 78px, 0);
+    }
+
+    12.5% {
+        clip: rect(55px, 9999px, 78px, 0);
+    }
+
+    16.666666666666664% {
+        clip: rect(20px, 9999px, 87px, 0);
+    }
+
+    20.833333333333336% {
+        clip: rect(42px, 9999px, 83px, 0);
+    }
+
+    25% {
+        clip: rect(95px, 9999px, 44px, 0);
+    }
+
+    29.166666666666668% {
+        clip: rect(5px, 9999px, 11px, 0);
+    }
+
+    33.33333333333333% {
+        clip: rect(2px, 9999px, 71px, 0);
+    }
+
+    37.5% {
+        clip: rect(124px, 9999px, 129px, 0);
+    }
+
+    41.66666666666667% {
+        clip: rect(34px, 9999px, 15px, 0);
+    }
+
+    45.83333333333333% {
+        clip: rect(69px, 9999px, 29px, 0);
+    }
+
+    50% {
+        clip: rect(19px, 9999px, 81px, 0);
+    }
+
+    54.166666666666664% {
+        clip: rect(80px, 9999px, 104px, 0);
+    }
+
+    58.333333333333336% {
+        clip: rect(3px, 9999px, 57px, 0);
+    }
+
+    62.5% {
+        clip: rect(95px, 9999px, 50px, 0);
+    }
+
+    66.66666666666666% {
+        clip: rect(16px, 9999px, 118px, 0);
+    }
+
+    70.83333333333334% {
+        clip: rect(20px, 9999px, 140px, 0);
+    }
+
+    75% {
+        clip: rect(18px, 9999px, 62px, 0);
+    }
+
+    79.16666666666666% {
+        clip: rect(143px, 9999px, 12px, 0);
+    }
+
+    83.33333333333334% {
+        clip: rect(97px, 9999px, 111px, 0);
+    }
+
+    87.5% {
+        clip: rect(135px, 9999px, 34px, 0);
+    }
+
+    91.66666666666666% {
+        clip: rect(140px, 9999px, 83px, 0);
+    }
+
+    95.83333333333334% {
+        clip: rect(139px, 9999px, 125px, 0);
+    }
+
+    100% {
+        clip: rect(14px, 9999px, 51px, 0);
+    }
+}
+
+@-webkit-keyframes glitch-anim-2 {
+    6.666666666666667% {
+        clip: rect(102px, 9999px, 90px, 0);
+    }
+
+    10% {
+        clip: rect(38px, 9999px, 2px, 0);
+    }
+
+    13.333333333333334% {
+        clip: rect(22px, 9999px, 50px, 0);
+    }
+
+    16.666666666666664% {
+        clip: rect(99px, 9999px, 118px, 0);
+    }
+
+    20% {
+        clip: rect(53px, 9999px, 146px, 0);
+    }
+
+    23.333333333333332% {
+        clip: rect(28px, 9999px, 110px, 0);
+    }
+
+    26.666666666666668% {
+        clip: rect(37px, 9999px, 17px, 0);
+    }
+
+    30% {
+        clip: rect(101px, 9999px, 71px, 0);
+    }
+
+    33.33333333333333% {
+        clip: rect(86px, 9999px, 24px, 0);
+    }
+
+    36.666666666666664% {
+        clip: rect(150px, 9999px, 76px, 0);
+    }
+
+    40% {
+        clip: rect(61px, 9999px, 139px, 0);
+    }
+
+    43.333333333333336% {
+        clip: rect(144px, 9999px, 98px, 0);
+    }
+
+    46.666666666666664% {
+        clip: rect(96px, 9999px, 132px, 0);
+    }
+
+    50% {
+        clip: rect(13px, 9999px, 1px, 0);
+    }
+
+    53.333333333333336% {
+        clip: rect(94px, 9999px, 125px, 0);
+    }
+
+    56.666666666666664% {
+        clip: rect(74px, 9999px, 148px, 0);
+    }
+
+    60% {
+        clip: rect(48px, 9999px, 116px, 0);
+    }
+
+    63.33333333333333% {
+        clip: rect(10px, 9999px, 19px, 0);
+    }
+
+    66.66666666666666% {
+        clip: rect(91px, 9999px, 25px, 0);
+    }
+
+    70% {
+        clip: rect(84px, 9999px, 71px, 0);
+    }
+
+    73.33333333333333% {
+        clip: rect(144px, 9999px, 89px, 0);
+    }
+
+    76.66666666666667% {
+        clip: rect(69px, 9999px, 38px, 0);
+    }
+
+    80% {
+        clip: rect(113px, 9999px, 103px, 0);
+    }
+
+    83.33333333333334% {
+        clip: rect(17px, 9999px, 50px, 0);
+    }
+
+    86.66666666666667% {
+        clip: rect(40px, 9999px, 4px, 0);
+    }
+
+    90% {
+        clip: rect(0px, 9999px, 32px, 0);
+    }
+
+    93.33333333333333% {
+        clip: rect(1px, 9999px, 118px, 0);
+    }
+
+    96.66666666666667% {
+        clip: rect(48px, 9999px, 75px, 0);
+    }
+
+    100% {
+        clip: rect(99px, 9999px, 45px, 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    6.666666666666667% {
+        clip: rect(102px, 9999px, 90px, 0);
+    }
+
+    10% {
+        clip: rect(38px, 9999px, 2px, 0);
+    }
+
+    13.333333333333334% {
+        clip: rect(22px, 9999px, 50px, 0);
+    }
+
+    16.666666666666664% {
+        clip: rect(99px, 9999px, 118px, 0);
+    }
+
+    20% {
+        clip: rect(53px, 9999px, 146px, 0);
+    }
+
+    23.333333333333332% {
+        clip: rect(28px, 9999px, 110px, 0);
+    }
+
+    26.666666666666668% {
+        clip: rect(37px, 9999px, 17px, 0);
+    }
+
+    30% {
+        clip: rect(101px, 9999px, 71px, 0);
+    }
+
+    33.33333333333333% {
+        clip: rect(86px, 9999px, 24px, 0);
+    }
+
+    36.666666666666664% {
+        clip: rect(150px, 9999px, 76px, 0);
+    }
+
+    40% {
+        clip: rect(61px, 9999px, 139px, 0);
+    }
+
+    43.333333333333336% {
+        clip: rect(144px, 9999px, 98px, 0);
+    }
+
+    46.666666666666664% {
+        clip: rect(96px, 9999px, 132px, 0);
+    }
+
+    50% {
+        clip: rect(13px, 9999px, 1px, 0);
+    }
+
+    53.333333333333336% {
+        clip: rect(94px, 9999px, 125px, 0);
+    }
+
+    56.666666666666664% {
+        clip: rect(74px, 9999px, 148px, 0);
+    }
+
+    60% {
+        clip: rect(48px, 9999px, 116px, 0);
+    }
+
+    63.33333333333333% {
+        clip: rect(10px, 9999px, 19px, 0);
+    }
+
+    66.66666666666666% {
+        clip: rect(91px, 9999px, 25px, 0);
+    }
+
+    70% {
+        clip: rect(84px, 9999px, 71px, 0);
+    }
+
+    73.33333333333333% {
+        clip: rect(144px, 9999px, 89px, 0);
+    }
+
+    76.66666666666667% {
+        clip: rect(69px, 9999px, 38px, 0);
+    }
+
+    80% {
+        clip: rect(113px, 9999px, 103px, 0);
+    }
+
+    83.33333333333334% {
+        clip: rect(17px, 9999px, 50px, 0);
+    }
+
+    86.66666666666667% {
+        clip: rect(40px, 9999px, 4px, 0);
+    }
+
+    90% {
+        clip: rect(0px, 9999px, 32px, 0);
+    }
+
+    93.33333333333333% {
+        clip: rect(1px, 9999px, 118px, 0);
+    }
+
+    96.66666666666667% {
+        clip: rect(48px, 9999px, 75px, 0);
+    }
+
+    100% {
+        clip: rect(99px, 9999px, 45px, 0);
+    }
+}
+
+h1, h2, location {
+
+    justify-content: center;
+    align-content: center;
+    font-family: 'LEDFont';
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 86pt;
+    margin-bottom: 10px;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 13px 16px 6px rgba(180,44,188,0);
+    color: #FF4AE6;
+    /*background: #333333;*/
+}
+
+h1.text-shadow-drop-top {
+    -webkit-animation: text-shadow-drop-top 0.6s infinite both;
+    animation: text-shadow-drop-top 0.6s infinite both;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: 'LEDFont';
+    font-weight: lighter;
+    color: #FF4AE6;
+}
+
+location {
+    align-content: center;
+    justify-content: center;
+    font-size: 24pt;
+    font-style: bold;
+    font-weight: lighter;
+    color: lawngreen;
+    outline: 8px dashed lawngreen;
+    outline-offset: 0px;
+}
+
+.dark h2 {
+    color: green;
+}
+
+.header {
+
+}
+
+
+
+h3.written-in-ink {
+    font-size: 9pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: white;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    top: 0;
+}
+
+.dark h3.written-in-ink {
+    background: black;
+}
+
+
+/* Seems necessary to make iframes work on itch.io on mobile iOS :-( */
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+    background: black;
+}
+
+.dark .container {
+    background: orange;
+}
+
+p {
+    font-size: 18pt;
+    color: green;
+    line-height: 1.7em;
+    font-weight: lighter;
+}
+
+a {
+    font-size: 24pt;
+    font-weight: 700;
+    color: lawngreen;
+    font-family: 'PixelFont';
+    transition: color 0.6s;
+    text-decoration: none;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+
+}
+
+.dark a {
+    color: #cc8f1a;
+    transition: color 0.6s;
+}
+
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+
+a:hover {
+    color: lime;
+    transition: color 0.1s;
+}
+
+.dark a:hover {
+    color: white;
+}
+
+strong {
+    color: black;
+    font-weight: bold;
+}
+
+.dark strong {
+    color: white;
+}
+
+heart {
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+
+.empty heart {
+
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.container .hide {
+    opacity: 0.0;
+}
+
+.container .invisible {
+    display: none;
+}
+
+.container * {
+    opacity: 1.0;
+    transition: opacity 1.0s;
+}
+
+p.choice {
+    text-align: center;
+    line-height: 1.7em;
+}
+
+/* first choice */
+:not(.choice) + .choice {
+    padding-top: 1em; 
+}
+
+
+p.choice a {
+    font-size: 15pt;
+}
+
+/* Built in class if you want to write:
+     The End # CLASS: end
+*/
+.end {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
