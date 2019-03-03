@@ -1,0 +1,85 @@
+﻿
+/*body {
+    background-image: url("https://d1itmove024qgx.cloudfront.net/e261e3a13d533247b50b67a8176853523399c9dd.jpg");
+    overflow: hidden;
+}*/
+
+
+.umi {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+    .umi::after {
+        content: "";
+        background: url(http://gifimage.net/wp-content/uploads/2017/08/tv-static-gif-7.gif);
+        opacity: 0.1;
+        background-size: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        z-index: 99;
+    }
+
+.statue {
+    position: absolute;
+    left: 30%;
+}
+
+    .statue img {
+        width: 100%;
+    }
+
+.ocean {
+    position: absolute;
+    background: transparent;
+    width: 2000px;
+    height: 300px;
+    top: 280px;
+    left: 60px;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.ocean2 {
+    position: absolute;
+    background: transparent;
+    width: 2000px;
+    height: 300px;
+    top: 160px;
+    left: -55px;
+    animation-name: example2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+}
+
+@keyframes example2 {
+    from {
+        top: 80%;
+        left: -70px;
+    }
+
+    to {
+        top: 55%;
+        left: -80px;
+    }
+}
+
+@keyframes example {
+    from {
+        top: 80%;
+        left: -30px;
+    }
+
+    to {
+        top: 45%;
+        left: -30px;
+    }
+}
